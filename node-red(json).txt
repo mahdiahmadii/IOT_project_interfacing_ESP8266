@@ -1,0 +1,180 @@
+[
+    {
+        "id": "c2b796328c524845",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d14f5de0ecd5a8cb",
+        "type": "inject",
+        "z": "c2b796328c524845",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "room/lamp",
+        "payload": "ON",
+        "payloadType": "str",
+        "x": 300,
+        "y": 220,
+        "wires": [
+            [
+                "7cb6fcec94e063bb"
+            ]
+        ]
+    },
+    {
+        "id": "2af9a7877e37ec67",
+        "type": "inject",
+        "z": "c2b796328c524845",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "room/lamp",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 300,
+        "y": 340,
+        "wires": [
+            [
+                "7cb6fcec94e063bb"
+            ]
+        ]
+    },
+    {
+        "id": "7cb6fcec94e063bb",
+        "type": "mqtt out",
+        "z": "c2b796328c524845",
+        "name": "",
+        "topic": "room/lamp",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 610,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "80d884d35f13b66c",
+        "type": "ui_switch",
+        "z": "c2b796328c524845",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "98d619e299bd54a8",
+        "order": 0,
+        "width": "5",
+        "height": "3",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 100,
+        "wires": [
+            [
+                "7cb6fcec94e063bb"
+            ]
+        ]
+    },
+    {
+        "id": "dca19a27fe0dfe2a",
+        "type": "mqtt in",
+        "z": "c2b796328c524845",
+        "name": "",
+        "topic": "room/r",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 440,
+        "wires": [
+            [
+                "e56428f930e1cee9"
+            ]
+        ]
+    },
+    {
+        "id": "e56428f930e1cee9",
+        "type": "ui_toast",
+        "z": "c2b796328c524845",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 580,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "98d619e299bd54a8",
+        "type": "ui_group",
+        "name": "کنترل وسایل برقی",
+        "tab": "436e62baa92edb07",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "436e62baa92edb07",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
