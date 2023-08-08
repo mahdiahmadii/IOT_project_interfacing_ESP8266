@@ -1,4 +1,4 @@
-# IoT Project: Raspberry Pi Server with Node-MCU ESP8266
+# IoT Project: using Node-MCU ESP8266 to control electrical devices
 ![images (1)](https://github.com/mahdiahmadii/first_IOT_project_ESP8266/assets/119660029/bdda2a01-9590-492e-ae05-0e7f1d784a5d)
 
 This repository contains a simple IoT (Internet of Things) project that allows you to control electrical devices, such as room lamps, using a Raspberry Pi as the server and a Node-MCU ESP8266 microcontroller.
